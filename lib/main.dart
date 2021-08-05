@@ -1,3 +1,4 @@
+import 'package:first_app/widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/folder/formation_class.dart';
 
@@ -22,9 +23,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("HELLO", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.amber),),
-      ),
+      body: textWidgets()
     );
   }
 }
