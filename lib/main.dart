@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:first_app/folder/formation_class.dart';
+import 'package:first_app/screen/visit_card.dart';
 
 void main() {
 
@@ -9,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ma carte de visite',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: VisitCard(),
     );
   }
 }
