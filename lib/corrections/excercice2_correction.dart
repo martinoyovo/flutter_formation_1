@@ -8,16 +8,40 @@ class Exo2Corrections extends StatelessWidget {
     return Column(
       children: <Widget>[
         Expanded(
-            flex: 1,
-            child: Row(
-              //crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget> [
-                Text("MENU 1", style: menuTextStyle),
-                Text("MENU 2", style: menuTextStyle),
-                Text("MENU 3", style: menuTextStyle),
-              ],
+            flex: 3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        //borderRadius: BorderRadius.circular(20),
+                        color: Colors.red,
+                        /*image: DecorationImage(
+                          image: AssetImage("assets/avatar.jpg"),
+                          fit: BoxFit.contain
+                        )*/
+                      ),
+                    ),
+                    Image.asset("assets/avatar.jpg", width: 150, height: 150, fit: BoxFit.contain,),
+                  ],
+                ),
+                Row(
+                  //crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget> [
+                    Text("MENU 1", style: menuTextStyle),
+                    Text("MENU 2", style: menuTextStyle),
+                    Text("MENU 3", style: menuTextStyle),
+                  ],
 
+                ),
+              ],
             )),
         Expanded(
             flex: 4,
