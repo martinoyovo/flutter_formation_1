@@ -2,33 +2,20 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
-
+  final menuTextStyle = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   @override
   Widget build(BuildContext context) {
     return Column(
      children: <Widget>[
        Expanded(
          flex: 1,
-
            child: Row(
-             crossAxisAlignment: CrossAxisAlignment.center,
-             mainAxisAlignment: MainAxisAlignment.center,
+             //crossAxisAlignment: CrossAxisAlignment.center,
+             mainAxisAlignment: MainAxisAlignment.spaceAround,
            children: <Widget> [
-             Expanded(
-                 child: Container(
-                   child: Text("MENU 1", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                 )
-             ),
-             Expanded(
-                 child: Container(
-                   child: Text("MENU 2", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                 )
-             ),
-             Expanded(
-                 child: Container(
-                   child: Text("MENU 3", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                 )
-             ),
+             Text("MENU 1", style: menuTextStyle),
+             Text("MENU 2", style: menuTextStyle),
+             Text("MENU 3", style: menuTextStyle),
            ],
 
        )),
@@ -47,6 +34,7 @@ class InfoCard extends StatelessWidget {
                Expanded(
                  flex: 5,
                  child: Column(
+                   //crossAxisAlignment: CrossAxisAlignment.center,
                    children: <Widget> [
                      Expanded(
                        flex: 2,
