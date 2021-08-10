@@ -1,3 +1,4 @@
+import 'package:first_app/corrections/excercice2_correction.dart';
 import 'package:first_app/widgets/text_widgets.dart';
 import 'package:first_app/widgets/exercice2.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +26,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: Text("ENTRAINEMENT"),),
-      body: InfoCard()
+      body: Exo2Corrections()
     );
   }
 }
