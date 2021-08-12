@@ -1,8 +1,6 @@
 import 'package:first_app/corrections/excercice2_correction.dart';
-import 'package:first_app/widgets/text_widgets.dart';
-import 'package:first_app/widgets/profile.dart';
+import 'package:first_app/widgets/formulaires.dart';
 import 'package:flutter/material.dart';
-import 'package:first_app/folder/formation_class.dart';
 
 
 void main() {
@@ -18,6 +16,13 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
+      //initialRoute: '/home',
+
+      ///DEFINITION DES ROUTES
+      routes: {
+        "/home": (context) => MyHomePage(),
+        "/formulaire": (context) => Formulaire()
+      },
     );
   }
 }
@@ -28,7 +33,20 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(title: Text("ENTRAINEMENT"),),
-      body: profile()
+      body: Center(
+        child: TextButton(
+          child: Text("Aller à Profile"),
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (c) {
+              return Formulaire();
+            }));
+          },
+          style: ButtonStyle(
+            elevation: MaterialStateProperty.all(0),
+            shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)))
+          ),
+        ),
+      ),
     );
   }
 }
