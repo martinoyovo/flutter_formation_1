@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'detail.dart';
 
-class VisitCard extends StatelessWidget {
+class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,29 +30,15 @@ class VisitCard extends StatelessWidget {
                       ),
                     ),
                   ),
-            Card(
-              margin: EdgeInsets.only(top: 30.0,bottom: 15.0,),
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "Je suis développeur d'application mobile Flutter. Mon numéro de téléphone est: 91650680",
-                    style: TextStyle(fontSize: 13),
-                  ),
-                ),
-              ),
-                  RaisedButton(
-                    onPressed: (){
-                      Navigator.push(
-                        context, MaterialPageRoute(
-                        builder: (BuildContext context){
-                          return Detail();
-                      }
+                  Card(
+                    margin: EdgeInsets.only(top: 30.0,bottom: 15.0,),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "Je suis développeur d'application mobile Flutter. Mon numéro de téléphone est: 91650680",
+                        style: TextStyle(fontSize: 13),
                       ),
-                      );
-
-                    },
-                    child: Text('En savoir plus', style: TextStyle(color: Colors.white70),),
-                    color: Colors.blueGrey,
+                    ),
                   ),
                 ]),
           ),
