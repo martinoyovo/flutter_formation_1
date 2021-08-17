@@ -1,4 +1,4 @@
-import 'package:first_app/models/person_page.dart';
+import 'package:first_app/students_list.dart';
 import 'package:first_app/widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/folder/formation_class.dart';
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.pink,
       ),
-      home: PersonList(),
+      home: StudentsList(),
     );
   }
 }
