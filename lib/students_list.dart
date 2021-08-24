@@ -1,3 +1,4 @@
+import 'package:first_app/add_student.dart';
 import 'package:flutter/material.dart';
 
 class StudentsList extends StatelessWidget {
@@ -11,6 +12,15 @@ class StudentsList extends StatelessWidget {
         centerTitle: true,
         title: Text("liste des étudiants".toUpperCase()),
         elevation: 0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add, color: Colors.white),
+        onPressed: () {
+          ///TO GO STUDENT FORM PAGE
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) => AddStudent()
+          ));
+        },
       ),
       body: ListView(
         children: [
