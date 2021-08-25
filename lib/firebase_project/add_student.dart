@@ -61,6 +61,9 @@ class AddStudent extends StatelessWidget {
             SizedBox(height: 20,),
             ElevatedButton(
                 style: ButtonStyle(
+                  elevation: MaterialStateProperty.all(0),
+                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 20)),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5))),
                     backgroundColor: MaterialStateProperty.all(Theme.of(context).primaryColor)
                 ),
                 onPressed: () {
@@ -69,7 +72,7 @@ class AddStudent extends StatelessWidget {
 
                       });
                 },
-                child: Text("Ajouter")
+                child: Text("Ajouter", style: TextStyle(fontSize: 17),)
             )
           ],
         ),
