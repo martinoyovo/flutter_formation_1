@@ -10,8 +10,8 @@ Widget textWidgets() {
         RichText(
             text: TextSpan(
           children: [
-            TextSpan(text: "Vous n'avez pas de compte? ", style: TextStyle(color: Colors.black)),
-            TextSpan(text: "Inscrivez-vous", style: TextStyle(color: Colors.amber))
+            TextSpan(text: "Don't have an account? ", style: TextStyle(color: Colors.black)),
+            TextSpan(text: "Sign Up", style: TextStyle(color: Colors.amber))
           ]
         ))
       ],
