@@ -9,39 +9,43 @@ class Exo2Corrections extends StatelessWidget {
       children: <Widget>[
         Expanded(
             flex: 3,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      height: 150,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        //borderRadius: BorderRadius.circular(20),
-                        color: Colors.red,
-                        /*image: DecorationImage(
-                          image: AssetImage("assets/avatar.jpg"),
-                          fit: BoxFit.contain
-                        )*/
+            child: Container(
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                   Row(
+                     mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        height: 150,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          //borderRadius: BorderRadius.circular(20),
+                          color: Colors.red,
+                          /*image: DecorationImage(
+                            image: AssetImage("assets/avatar.jpg"),
+                            fit: BoxFit.contain
+                          )*/
+                        ),
                       ),
-                    ),
-                    Image.asset("assets/avatar.jpg", width: 150, height: 150, fit: BoxFit.contain,),
-                  ],
-                ),
-                Row(
-                  //crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget> [
-                    Text("MENU 1", style: menuTextStyle),
-                    Text("MENU 2", style: menuTextStyle),
-                    Text("MENU 3", style: menuTextStyle),
-                  ],
+                      Image.asset("assets/avatar.jpg", width: 150, height: 150, fit: BoxFit.contain,),
+                    ],
+                  ),
+                  SizedBox(height: 10,),
+                  Row(
+                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget> [
+                      Text("MENU 1", style: menuTextStyle),
+                      Text("MENU 2", style: menuTextStyle),
+                      Text("MENU 3", style: menuTextStyle),
+                    ],
 
-                ),
-              ],
+                  ),
+                ],
+              ),
             )),
         Expanded(
             flex: 4,
@@ -85,7 +89,7 @@ class Exo2Corrections extends StatelessWidget {
         Expanded(
             flex: 2,
             child: Container(
-              color: Colors.deepOrangeAccent,
+              color: Colors.green,
               alignment: Alignment.center,
               child: Text("AUTRES INFORMATIONS", style: TextStyle(fontSize: 20, color: Colors.white,fontWeight: FontWeight.bold),),
 
