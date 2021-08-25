@@ -1,9 +1,12 @@
-import 'package:first_app/students_list.dart';
-import 'package:first_app/widgets/text_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:first_app/folder/formation_class.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+
+import 'firebase_project/students_list.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
