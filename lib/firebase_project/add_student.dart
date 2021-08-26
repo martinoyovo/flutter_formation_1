@@ -69,6 +69,11 @@ class AddStudent extends StatelessWidget {
                 onPressed: () {
                   addStudent(
                       {
+                        "age":ageC.text,
+                        "nom":nomC.text,
+                        "prenom":prenomC.text,
+                        "note":noteC.text,
+
 
                       });
                 },
