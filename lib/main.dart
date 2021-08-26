@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:first_app/folder/formation_class.dart';
 import 'package:first_app/screen/visit_card.dart';
 import 'package:first_app/screen/visit_card.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_project/students_list.dart';
 
 void main() {
-
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -15,11 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ma carte de visite',
+        debugShowCheckedModeBanner: false;
+        title: 'Gestion Etudiants',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyStatefulWidget(),
+      home: StudentsList(),
     );
   }
 }
@@ -28,9 +32,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("HELLO", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.amber),),
-      ),
+      body: StudentsList()
     );
   }
 }
