@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "310338436602",
+    "project_id": "etudiant-45f17",
+    "storage_bucket": "etudiant-45f17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310338436602:android:ba441ad5e4483a8e717843",
+        "android_client_info": {
+          "package_name": "com.example.flutteretudiant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310338436602-u1knqvfhcugo2mojjteiuvsmgeh070fc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvmMX0C4rg_phQqtbPXeCVEMzimGEmpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310338436602-u1knqvfhcugo2mojjteiuvsmgeh070fc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
