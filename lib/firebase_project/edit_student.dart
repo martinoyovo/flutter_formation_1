@@ -117,7 +117,7 @@ class EditStudent extends StatelessWidget {
                     );
                   }
                 },
-                child: Text("Ajouter", style: TextStyle(fontSize: 17),)
+                child: Text("Modifier", style: TextStyle(fontSize: 17),)
             )
           ],
         ),
