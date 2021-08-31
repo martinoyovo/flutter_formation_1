@@ -1,6 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+
 class CustomCard extends StatelessWidget {
+  final QueryDocumentSnapshot<Object?> studentInfos;
+  const CustomCard({Key? key, required this.studentInfos}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColor;
@@ -25,14 +30,14 @@ class CustomCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Tino Well", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                Text(studentInfos["prenom"]+studentInfos["nom"], style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 SizedBox(height: 3,),
-                Text("23 ans", style: TextStyle(fontSize: 15),),
+                Text("${studentInfos["age"]} ans", style: TextStyle(fontSize: 15),),
                 Row(
                   children: [
                     Icon(Icons.assignment_rounded, color: primaryColor),
                     SizedBox(width: 5,),
-                    Text("Note: 15"),
+                    Text("Note: ${studentInfos["note"]}"),
                   ],
                 )
               ],
