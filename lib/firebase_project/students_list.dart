@@ -9,7 +9,13 @@ class StudentsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     CollectionReference liste_etudiants = FirebaseFirestore.instance.collection("liste_etudiants");
-
+    /*
+    * snapshot.hasData
+    * snapshot.hasError
+    * snapshot.data
+    * snapshot.connectionState == ConnectionState.waiting
+    * snapshot.connectionState == ConnectionState.none
+    * */
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -25,8 +31,8 @@ class StudentsList extends StatelessWidget {
           ));
         },
       ),
-      body: FutureBuilder(
-        future: liste_etudiants.get(),
+      body: StreamBuilder(
+        stream: liste_etudiants.snapshots(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot<Object?>> snapshot) {
           if(snapshot.hasData) {
             print(snapshot.data!.docs.length);
@@ -39,7 +45,9 @@ class StudentsList extends StatelessWidget {
                 });
           }
           else if(snapshot.hasError) {
-
+            return Center(
+              child: Text("Une erreur s'est produite."),
+            );
           }
           else if(snapshot.connectionState == ConnectionState.waiting) {
 
@@ -53,6 +61,7 @@ class StudentsList extends StatelessWidget {
           );
         },
       )
+
       /*ListView(
         padding: EdgeInsets.only(top: 15),
         children: [
