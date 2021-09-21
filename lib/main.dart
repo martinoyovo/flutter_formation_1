@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutteretudiant/authentification/connexion_email_auth_page.dart';
+import 'package:flutteretudiant/authentification/inscription_email_auth_page.dart';
+import 'package:flutteretudiant/authentification/phone_auth_page.dart';
 import 'firebase_project/students_list.dart';
 
 void main() async {
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.pink,
           accentColor: Colors.pink
       ),
-      home: StudentsList(),
+      home: ConnexionEmailAuthPage(),
     );
   }
 }
